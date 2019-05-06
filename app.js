@@ -1,22 +1,49 @@
+const data = [
+  {id: 'equals', symbol: '='},
+  {id: 'zero', symbol: '0'}, 
+  {id: 'one', symbol: '1'}, 
+  {id: 'two', symbol: '2'}, 
+  {id: 'three', symbol: '3'}, 
+  {id: 'four', symbol: '4'}, 
+  {id: 'five', symbol: '5'}, 
+  {id: 'six', symbol: '6'}, 
+  {id: 'seven', symbol: '7'}, 
+  {id: 'eight', symbol: '8'}, 
+  {id: 'nine', symbol: '9'},
+  {id: 'add', symbol: '+'}, 
+  {id: 'subtract', symbol: '-'}, 
+  {id: 'multiply', symbol: '*'}, 
+  {id: 'divide', symbol: '/'}
+];
+
+class CalculatorButton extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  
+  render() {
+    return (
+      <button id={this.props.id}>
+        {this.props.symbol}
+      </button>
+    );
+  }
+}
+
 class App extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
   
   render() {
     return (
       <div>
-        <button id="equals">=</button>
-        <button id="zero">0</button>
-        <button id="one">1</button>
-        <button id="two">2</button>
-        <button id="three">3</button>
-        <button id="four">4</button>
-        <button id="five">5</button>
-        <button id="six">6</button>
-        <button id="seven">7</button>
-        <button id="eight">8</button>
-        <button id="nine">9</button>
+        {data.map(d => (
+	        <CalculatorButton
+	          id={d.id}
+	          symbol={d.symbol}
+	        />
+	      ))}
       </div>
     );
   }
