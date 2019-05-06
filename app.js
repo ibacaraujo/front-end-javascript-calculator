@@ -13,7 +13,8 @@ const data = [
   {id: 'add', symbol: '+'}, 
   {id: 'subtract', symbol: '-'}, 
   {id: 'multiply', symbol: '*'}, 
-  {id: 'divide', symbol: '/'}
+  {id: 'divide', symbol: '/'}, 
+  {id: 'decimal', symbol: '.'}
 ];
 
 class CalculatorButton extends React.Component {
