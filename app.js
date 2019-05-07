@@ -14,7 +14,8 @@ const data = [
   {id: 'subtract', symbol: '-'}, 
   {id: 'multiply', symbol: '*'}, 
   {id: 'divide', symbol: '/'}, 
-  {id: 'decimal', symbol: '.'}
+  {id: 'decimal', symbol: '.'},
+  {id: 'clear', symbol: 'C'}
 ];
 
 class CalculatorButton extends React.Component {
