@@ -40,6 +40,8 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <div id="display">
+        </div>
         {data.map(d => (
 	        <CalculatorButton
 	          id={d.id}
