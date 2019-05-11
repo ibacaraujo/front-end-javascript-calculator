@@ -35,12 +35,16 @@ class CalculatorButton extends React.Component {
 class App extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      display: 0
+    }
   }
   
   render() {
     return (
       <div>
         <div id="display">
+          {this.state.display}
         </div>
         {data.map(d => (
 	        <CalculatorButton
